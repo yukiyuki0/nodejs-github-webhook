@@ -1,5 +1,6 @@
 #!/bin/bash
 
 # DIRECTORY TO THE REPOSITORY
-cd ~/node_tutorial/mongoose_tutorial
+REPOSITORY="../mongoose_tutorial"
+cd $REPOSITORY
 git pull
