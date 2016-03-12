@@ -40,7 +40,10 @@ http.createServer(function(req, res){
           console.log(buff.toString('utf-8'));
       });
 
-      var data = JSON.stringify({"success": true});
+      
+    res.writeHead(400, {"Content-Type": "application/json"});
+    
+    var data = JSON.stringify({"success": true});
       return res.end(data);
  
     });

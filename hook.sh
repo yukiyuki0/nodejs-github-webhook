@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # DIRECTORY TO THE REPOSITORY
-REPOSITORY="./myRepository"
+REPOSITORY="../react-tutorials"
 
 cd $REPOSITORY
 
