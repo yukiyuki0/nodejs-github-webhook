@@ -3,7 +3,7 @@ var spawn   = require('child_process').spawn;
 var crypto  = require('crypto');
 var url     = require('url');
 
-var secret  = 'amazingkey'; // secret key of the webhook
+var secret  = 'ChatDevKey'; // secret key of the webhook
 var port    = 8081; // port
 
 http.createServer(function(req, res){
@@ -36,12 +36,12 @@ http.createServer(function(req, res){
    
       var deploySh = spawn('sh', ['hook.sh']);
       deploySh.stdout.on('data', function(data){
-          var buff = new Buffer(data);
-          console.log(buff.toString('utf-8'));
+		  var buff = Buffer.from(data);
+		  console.log(buff.toString());
       });
 
       
-    res.writeHead(400, {"Content-Type": "application/json"});
+    res.writeHead(200, {"Content-Type": "application/json"});
     
     var data = JSON.stringify({"success": true});
       return res.end(data);
